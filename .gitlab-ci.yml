@@ -1,0 +1,49 @@
+image: docker:git
+ 
+services:
+- docker:dind
+ 
+variables:
+  DOCKER_HOST: tcp://docker:2375
+  DOCKER_DRIVER: overlay2
+  IMAGE: $CI_REGISTRY_IMAGE:$CI_COMMIT_SHORT_SHA
+  DIR: build
+ 
+before_script:
+  - docker login -u gitlab-ci-token -p $CI_BUILD_TOKEN $CI_REGISTRY 
+
+stages:
+  - build
+  - push
+
+
+# ------- Build -------
+
+build:
+  stage: build
+  only:
+    - merge_requests
+    - dev
+    - master  
+  script:
+    - docker build -t $IMAGE .
+    - mkdir $DIR
+    - docker save $IMAGE > $DIR/image.tar
+  artifacts:
+    paths:
+      - $DIR
+    expire_in: 30 days
+
+
+# ------- Push Docker Image -------
+
+push:
+  stage: push
+  only:
+    - dev
+    - master
+  script:
+    - docker load -i $DIR/image.tar
+    - docker push $IMAGE
+  dependencies:
+    - build
