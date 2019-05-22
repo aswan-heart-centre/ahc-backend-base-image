@@ -37,6 +37,7 @@ ENV PYTHON_PACKAGES="\
   celery==4.3.0 \
   plotly==3.8.0 \
   cufflinks==0.15 \
+  pytest==4.5.0 \
   " 
 
 RUN apk add --no-cache --virtual build-dependencies python3-dev \
