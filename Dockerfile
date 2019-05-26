@@ -22,9 +22,9 @@ ENV PACKAGES="\
   libffi-dev \
   "
 ENV PYTHON_PACKAGES="\
-  numpy \
-  pandas \
-  bcrypt \
+  numpy==1.16.3 \
+  pandas==0.24.2 \
+  bcrypt==3.1.6 \
   Flask==1.0.2 \
   flask-restful==0.3.7 \
   flask_cors==3.0.7 \
@@ -38,6 +38,8 @@ ENV PYTHON_PACKAGES="\
   plotly==3.8.0 \
   cufflinks==0.15 \
   pytest==4.5.0 \
+  black==19.3b0 \
+  flake8==3.7.7 \
   " 
 
 RUN apk add --no-cache --virtual build-dependencies python3-dev \
