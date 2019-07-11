@@ -42,7 +42,7 @@ ENV PYTHON_PACKAGES="\
   flake8==3.7.7 \
   pdoc3==0.6.2 \
   cx-Oracle==7.1.3 \
-  google-auth==1.6.2 \
+  google-auth==1.6.3 \
   " 
 
 RUN apk add --no-cache --virtual build-dependencies python3-dev \
