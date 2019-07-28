@@ -35,8 +35,7 @@ ENV PYTHON_PACKAGES="\
   flask_mail==0.9.1 \
   requests==2.21.0 \
   celery==4.3.0 \
-  plotly==3.8.0 \
-  cufflinks==0.15 \
+  plotly==4.0.0 \
   pytest==4.5.0 \
   black==19.3b0 \
   flake8==3.7.7 \
