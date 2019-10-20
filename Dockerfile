@@ -4,6 +4,8 @@ LABEL MAINTAINER="Ahmed Saleh <a.saleh.ismael@gmail.com>"
 
 WORKDIR /var/www/
 
+ENV PYCURL_SSL_LIBRARY=openssl
+
 ENV PACKAGES="\
   dumb-init \
   musl \
@@ -20,6 +22,8 @@ ENV PACKAGES="\
   openblas \
   libssl1.0 \
   libffi-dev \
+  libcurl \
+  curl-dev \
   "
 ENV PYTHON_PACKAGES="\
   numpy==1.16.3 \
@@ -42,7 +46,8 @@ ENV PYTHON_PACKAGES="\
   pdoc3==0.6.2 \
   cx-Oracle==7.1.3 \
   google-auth==1.6.3 \
-  " 
+  pycurl==7.43.0.3 \
+  "
 
 RUN apk add --no-cache --virtual build-dependencies python3-dev \
   && apk add --no-cache --virtual build-dependencies $PACKAGES \
