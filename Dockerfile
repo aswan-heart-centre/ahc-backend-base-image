@@ -1,4 +1,4 @@
-FROM alpine:3.8
+FROM alpine:3.13
 
 LABEL MAINTAINER="Ahmed Saleh <a.saleh.ismael@gmail.com>"
 
@@ -20,7 +20,6 @@ ENV PACKAGES="\
   libgcc \
   libstdc++ \
   openblas \
-  libssl1.0 \
   libffi-dev \
   libcurl \
   curl-dev \
