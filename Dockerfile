@@ -31,7 +31,7 @@ ENV PYTHON_PACKAGES="\
   Flask==1.0.2 \
   flask-restful==0.3.7 \
   flask_cors==3.0.9 \
-  gunicorn==20.0.1 \
+  gunicorn==20.1.0 \
   python-dotenv==0.10.1 \
   pymongo==3.7.2 \
   flask_jwt==0.3.2 \
