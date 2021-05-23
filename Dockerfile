@@ -48,12 +48,10 @@ ENV PYTHON_PACKAGES="\
   pycurl==7.43.0.6 \
   "
 
-RUN apk add --no-cache --virtual build-dependencies python3-dev \
-  && apk add --no-cache --virtual build-dependencies $PACKAGES \
-  && apk add --virtual build-runtime \
-  build-base openblas-dev freetype-dev pkgconfig gfortran \
+RUN apk add --no-cache python3-dev py-pip\
+  && apk add --no-cache $PACKAGES \
+  && apk add build-base openblas-dev freetype-dev pkgconfig gfortran \
   && ln -s /usr/include/locale.h /usr/include/xlocale.h \
   && pip3 install --upgrade pip \
   && pip3 install --no-cache-dir $PYTHON_PACKAGES \
-  && apk del build-runtime \
   && rm -rf /var/cache/apk/*
