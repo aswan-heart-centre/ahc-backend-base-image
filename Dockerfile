@@ -46,7 +46,7 @@ ENV PYTHON_PACKAGES="\
   cx-Oracle==7.1.3 \
   google-auth==1.6.3 \
   pycurl==7.43.0.6 \
-  sentry-sdk\
+  sentry-sdk[flask]\
   "
 
 RUN apk add --no-cache python3-dev py-pip\
