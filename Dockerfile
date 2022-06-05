@@ -32,15 +32,16 @@ ENV PYTHON_PACKAGES="\
   flask-restful==0.3.7 \
   flask_cors==3.0.9 \
   gunicorn==20.1.0 \
-  python-dotenv==0.10.1 \
-  pymongo==3.7.2 \
+  python-dotenv==0.19.1 \
+  pymongo==4.1.1 \
+  SQLAlchemy==1.4.37 \
   flask_jwt==0.3.2 \
   flask_mail==0.9.1 \
   requests==2.21.0 \
   celery==5.1.2 \
-  plotly==4.14.3 \
-  pytest==4.5.0 \
-  black==19.3b0 \
+  plotly==5.8.0 \
+  pytest==6.2.2 \
+  black==19.3b0 \ 
   flake8==3.7.7 \
   pdoc3==0.6.2 \
   cx-Oracle==7.1.3 \
