@@ -47,7 +47,7 @@ ENV PYTHON_PACKAGES="\
   pdoc3==0.6.2 \
   cx-Oracle==7.1.3 \
   google-auth==1.6.3 \
-  pycurl==7.43.0.6 \
+  pycurl==7.45.2 \
   dnspython==2.4.1 \
   calmap==0.0.11 \ 
   redis==4.3.4 \
