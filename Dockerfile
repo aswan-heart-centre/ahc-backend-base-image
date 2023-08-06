@@ -25,7 +25,6 @@ ENV PACKAGES="\
   curl-dev \
   "
 ENV PYTHON_PACKAGES="\
-  numpy==1.20.3 \
   pandas==2.0.0 \
   bcrypt==3.1.6 \
   Flask==2.3.2 \
