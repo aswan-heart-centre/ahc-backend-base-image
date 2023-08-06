@@ -53,7 +53,6 @@ ENV PYTHON_PACKAGES="\
   calmap==0.0.11 \ 
   calplot==0.1.7.5 \
   plotly-calplot==0.1.16 \
-  celery==5.1.0b1 \ 
   redis==4.3.4 \
   sentry-sdk[flask] \
   "
