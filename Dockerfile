@@ -25,7 +25,8 @@ ENV PACKAGES="\
   curl-dev \
   "
 ENV PYTHON_PACKAGES="\
-  pandas==2.0.0 \
+  calplot==0.1.7.5 \
+  plotly-calplot==0.1.16 \
   bcrypt==3.1.6 \
   Flask==2.3.2 \
   flask-restful==0.3.7 \
@@ -39,7 +40,6 @@ ENV PYTHON_PACKAGES="\
   flask_jwt==0.3.2 \
   flask_mail==0.9.1 \
   requests==2.21.0 \
-  celery==5.1.2 \
   plotly==5.8.0 \
   pytest==6.2.2 \
   black==19.3b0 \ 
@@ -50,8 +50,6 @@ ENV PYTHON_PACKAGES="\
   pycurl==7.43.0.6 \
   dnspython==2.4.1 \
   calmap==0.0.11 \ 
-  calplot==0.1.7.5 \
-  plotly-calplot==0.1.16 \
   redis==4.3.4 \
   sentry-sdk[flask] \
   "
@@ -62,4 +60,5 @@ RUN apk add --no-cache python3-dev py-pip\
   && ln -s /usr/include/locale.h /usr/include/xlocale.h \
   && pip3 install --upgrade pip \
   && pip3 install --no-cache-dir $PYTHON_PACKAGES \
+  && pip3 install --no-cache-dir --upgrade pandas==2.0.0 \
   && rm -rf /var/cache/apk/*
