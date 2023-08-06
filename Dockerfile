@@ -49,7 +49,7 @@ ENV PYTHON_PACKAGES="\
   cx-Oracle==7.1.3 \
   google-auth==1.6.3 \
   pycurl==7.43.0.6 \
-  dnspython=2.4.1 \
+  dnspython==2.4.1 \
   calmap==0.0.11 \ 
   calplot==0.1.7.5 \
   plotly-calplot==0.1.16 \
