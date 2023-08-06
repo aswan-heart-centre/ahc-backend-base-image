@@ -1,4 +1,4 @@
-FROM alpine:3.13
+FROM alpine:3.18
 
 LABEL MAINTAINER="Ahmed Saleh <a.saleh.ismael@gmail.com>"
 
@@ -25,16 +25,18 @@ ENV PACKAGES="\
   curl-dev \
   "
 ENV PYTHON_PACKAGES="\
-  numpy==1.19.5 \
-  pandas==1.2.3 \
+  numpy==1.20.3 \
+  pandas==2.0.0 \
   bcrypt==3.1.6 \
-  Flask==1.0.2 \
+  Flask==2.3.2 \
   flask-restful==0.3.7 \
   flask_cors==3.0.9 \
+  Jinja2==3.1.2 \
   gunicorn==20.1.0 \
   python-dotenv==0.19.1 \
-  pymongo==4.1.1 \
-  SQLAlchemy==1.4.37 \
+  pymongo==4.2.0 \
+  gevent==23.7.0 \
+  SQLAlchemy==2.0.19 \
   flask_jwt==0.3.2 \
   flask_mail==0.9.1 \
   requests==2.21.0 \
@@ -47,7 +49,13 @@ ENV PYTHON_PACKAGES="\
   cx-Oracle==7.1.3 \
   google-auth==1.6.3 \
   pycurl==7.43.0.6 \
-  sentry-sdk[flask]\
+  dnspython=2.4.1 \
+  calmap==0.0.11 \ 
+  calplot==0.1.7.5 \
+  plotly-calplot==0.1.16 \
+  celery==5.1.0b1 \ 
+  redis==4.3.4 \
+  sentry-sdk[flask] \
   "
 
 RUN apk add --no-cache python3-dev py-pip\
